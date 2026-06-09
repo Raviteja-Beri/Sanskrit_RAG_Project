@@ -1,0 +1,9 @@
+sentence-transformers==2.7.0
+faiss-cpu==1.8.0
+rank_bm25==0.2.2
+llama-cpp-python==0.2.90
+indic-transliteration==2.3.59
+langchain==0.2.16
+pypdf==4.3.1
+numpy==1.26.4
+python-docx==1.2.0

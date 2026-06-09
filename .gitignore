@@ -1,0 +1,28 @@
+# Virtual Environment
+Sanskrit_RAG/
+venv/
+.venv/
+env/
+
+# Models Directory (contains large GGUF model weights)
+models/
+
+# Search Indices (FAISS index and BM25 pickles)
+index/
+
+# Evaluation Reports
+report/*.csv
+report/*.pdf
+report/ablation_results.json
+report/retrieval_output.txt
+
+# Python temporary files and cache
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# OS Files
+.DS_Store
+Thumbs.db
