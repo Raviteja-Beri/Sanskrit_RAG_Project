@@ -8,7 +8,7 @@ This repository was engineered to address specific linguistic and retrieval chal
 
 ## System Architecture
 
-The workflow below details how a Sanskrit query—regardless of its script transliteration scheme is normalized, matched, fused, re-ranked, and finally resolved by a local Language Model.
+The workflow below details how a Sanskrit query regardless of its script transliteration scheme is normalized, matched, fused, re-ranked, and finally resolved by a local Language Model.
 
 ![Sanskrit RAG System Architecture](system_architecture.png)
 
@@ -70,7 +70,7 @@ To balance semantic understanding with strict keyword matching:
 
 To optimize retrieval performance, a custom benchmark of **21 manually annotated Sanskrit queries** with mapped ground-truth verse ranges was constructed. 
 
-Rather than evaluating by chunk ID—which changes with chunking settings—**evaluation is performed at the verse level**. This decouples the evaluation benchmark from chunking choices and allows for scientific ablation testing:
+Rather than evaluating by chunk ID which changes with chunking settings **evaluation is performed at the verse level**. This decouples the evaluation benchmark from chunking choices and allows for scientific ablation testing:
 
 ### Retrieval Ablation Results ($k=5$)
 
