@@ -1,4 +1,4 @@
-# ☸️ Sanskrit Retrieval-Augmented Generation (RAG) System
+# Sanskrit Retrieval-Augmented Generation (RAG) System
 
 An end-to-end, evaluation-driven Sanskrit RAG system featuring query transliteration, dual hybrid indexing (FAISS semantic & BM25 keyword search), Reciprocal Rank Fusion (RRF), Cross-Encoder re-ranking, and local GGUF LLM inference.
 
@@ -6,7 +6,7 @@ This repository was engineered to address specific linguistic and retrieval chal
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 The workflow below details how a Sanskrit query—regardless of its script transliteration scheme—is normalized, matched, fused, re-ranked, and finally resolved by a local Language Model.
 
@@ -41,7 +41,7 @@ graph TD
 
 ---
 
-## 🌟 Core Engineering Features
+## Core Engineering Features
 
 ### 1. Transliteration-Aware Query Normalization
 Sanskrit texts are widely consumed and queried across different scripts. To prevent retrieval failure due to script mismatches, the system incorporates a custom transliteration engine:
@@ -86,7 +86,7 @@ Rather than evaluating by chunk ID—which changes with chunking settings—**ev
 
 ---
 
-## 📁 Project Directory Layout
+## Project Directory Layout
 
 ```text
 RAG_Sanskrit_Raviteja_Beri/
@@ -114,7 +114,7 @@ RAG_Sanskrit_Raviteja_Beri/
 
 ---
 
-## 🚀 Execution & Setup Guide
+## Execution & Setup Guide
 
 ### 1. Environment Activation
 Activate the pre-configured Python virtual environment:
@@ -153,9 +153,14 @@ python code/pipeline.py --query "वृद्धा वनं गत्वा �
 
 ---
 
-## 🎓 Why This Project Stands Out (Interview Highlights)
+## Future Work
 
-* **Evaluation-Driven Decisions**: Rather than building on intuition, chunk sizes and retrieval models were selected by measuring retrieval metrics (Precision, Recall, MRR, NDCG, MAP) using systematic ablation.
-* **Linguistic Awareness**: Custom preprocessing solves Sanskrit-specific token matching issues by detecting inputs in 4 scripts, normalising Unicode NFC, and mapping transliteration variants.
-* **Architecture from First Principles**: Avoids bulky wrappers (like LangChain or LlamaIndex) for core indexing and retrieval. Written directly using `faiss`, `rank_bm25`, and `sentence-transformers` for maximum customization and computational efficiency.
-* **Production Polish**: Includes automated ReportLab-driven PDF reporting to visually track retrieval performance.
+Potential improvements include:
+
+* BGE-M3 embeddings
+* multilingual-e5-large embeddings
+* multilingual rerankers
+* Sanskrit-specific embedding fine-tuning
+* Query expansion and HyDE retrieval
+* Larger benchmark datasets
+* Larger Sanskrit corpora
