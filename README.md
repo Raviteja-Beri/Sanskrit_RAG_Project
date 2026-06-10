@@ -10,7 +10,7 @@ This repository was engineered to address specific linguistic and retrieval chal
 
 The workflow below details how a Sanskrit query regardless of its script transliteration scheme is normalized, matched, fused, re-ranked, and finally resolved by a local Language Model.
 
-![Sanskrit RAG System Architecture](system_architecture.png)
+![Sanskrit RAG System Architecture](System_Architecture.png)
 
 ### Interactive Flow Diagram
 ```mermaid
